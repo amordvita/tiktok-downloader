@@ -185,12 +185,12 @@ const getIdVideo = (url) => {
     console.log(chalk.blue(header))
     //const choice = await getChoice();
     const choice = { choice: "Mass Download (Username)" };
-    const username = "sublimacionemprende_pro";
+    const username = "@sublimacionemprende_pro";
     var listVideo = [];
     var listMedia = [];
     if (choice.choice === "Mass Download (Username)") {
-        const usernameInput = await getInput("Enter the username with @ (e.g. @username) : ");
-        const username = usernameInput.input;
+        //const usernameInput = await getInput("Enter the username with @ (e.g. @username) : ");
+        //const username = usernameInput.input;
         listVideo = await getListVideoByUsername(username);
         if(listVideo.length === 0) {
             console.log(chalk.yellow("[!] Error: No video found"));
